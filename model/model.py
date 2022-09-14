@@ -26,41 +26,60 @@ with open("in.txt") as csvfile:
             rowlist.append(value)
             
         environment.append(rowlist)
-        
-matplotlib.pyplot.imshow(environment)
-matplotlib.pyplot.show()       
-    
-
-
+      
 def distance_between(agents_row_a, agents_row_b):
     return (((agents_row_a.x - agents_row_b.x)**2) +
     ((agents_row_a.y - agents_row_b.y)**2))**0.5
 
 num_of_agents = 10
-num_of_iterations = 100
+num_of_iterations = 500
 agents = []
 
 # Make the agents.
 for i in range(num_of_agents):
-    agents.append(agentframework.Agent())
+    agents.append(agentframework.Agent(environment))
 
-agents.append(agentframework.Agent(0, 0))
+agents.append(agentframework.Agent(1, 1))
 
-agents.append(agentframework.Agent(environment))
+# agents.append(agentframework.Agent(environment))
 
 # Move the agents.
 for j in range(num_of_iterations):
     for i in range(num_of_agents):
         agents[i].move()
-        
+        agents[i].eat()
 
-matplotlib.pyplot.xlim(0, 99)
-matplotlib.pyplot.ylim(0, 99)
-for i in range(len(agents)):
+matplotlib.pyplot.xlim(0, 300)
+matplotlib.pyplot.ylim(0, 300)
+matplotlib.pyplot.imshow(environment)
+
+for i in range(num_of_agents):
     matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
 matplotlib.pyplot.show()
 
+
+# Writing the environment at the end
+f = open("FinalEnvironment.txt", 'w+',   newline = "")
+with f:
+    write = csv.writer(f) 
+    write.writerows(environment)
+f.close()
+
+# Writing the Agent storage, a+ argument is used to append the files
+f_store = open("AgentStorage.txt", 'a+',   newline = "")
+tmp_store=[]
+with f_store:
+    write = csv.writer(f_store)
+    tmp_store=[]
+    for k in range(num_of_agents):
+        tmp_store.append(agents[k].store)
+    print(tmp_store) # Print for testing the result of the storage in each iteration
+    write.writerow(tmp_store)
+f_store.close()
+
+
+'''
 for agents_row_a in agents:
     for agents_row_b in agents:
         distance = distance_between(agents_row_a, agents_row_b)
-
+'''
