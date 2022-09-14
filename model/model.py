@@ -13,7 +13,7 @@ import csv
 
 
 environment = []
-# Reading the file
+# Reading the environment file
 with open("in.txt") as csvfile:
     dataset = csv.reader(csvfile, delimiter=',',quoting = csv.QUOTE_NONNUMERIC)
     # Loop for the rows
@@ -27,12 +27,10 @@ with open("in.txt") as csvfile:
             
         environment.append(rowlist)
       
-def distance_between(agents_row_a, agents_row_b):
-    return (((agents_row_a.x - agents_row_b.x)**2) +
-    ((agents_row_a.y - agents_row_b.y)**2))**0.5
+num_of_agents = 20
+num_of_iterations = 10000
+neighbourhood = 50 
 
-num_of_agents = 10
-num_of_iterations = 100
 agents = []
 
 # Make the agents.
@@ -46,6 +44,7 @@ for j in range(num_of_iterations):
     for i in range(num_of_agents):
         agents[i].move()
         agents[i].eat()
+        agents[i].share_with_neighbours(neighbourhood)
 
 matplotlib.pyplot.xlim(0, 300)
 matplotlib.pyplot.ylim(0, 300)

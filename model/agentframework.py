@@ -12,7 +12,7 @@ class Agent():
     def __init__ (self, environment, agents, x = None, y = None):
         self.environment = environment
         self.store = 0
-        self.angents = agents
+        self.agents = agents
         
         # Define the limits for randomising
         n_rows = len(self.environment)
@@ -33,7 +33,6 @@ class Agent():
     
     def __str__ (self):
         return (f'Agent located in x: {self._x}, y: {self._y}, stores: {self.store}')
-        #return print(f"Agent({self._x},{self._y},{self.store})")
         
     @property
     def x (self):
@@ -68,5 +67,28 @@ class Agent():
         if self.store > 100: 
             self.environment[self.y][self.x] += self.store
             self.store = 0
+            
+    def distance_between(self, agent):
+        return (((self.x - agent.x)**2) +((self.y - agent.y)**2))**0.5
+
+    def share_with_neighbours(self,neighbourhood):
+        # Loop through the agents in self.agents .
+        for i in range(len(self.agents)):
+            # Calculate the distance between self and the current other agent:
+            distance = self.distance_between(self.agents[i])
+            # If distance is less than or equal to the neighbourhood
+            if distance <= neighbourhood:
+                # print('Sharing!') #Added to test the if statement
+                # Sum self.store and agent.store .
+                totalstore=self.store + self.agents[i].store
+                # Divide sum by two to calculate average.
+                avgstore = totalstore/2
+                # self.store = average
+                self.store = avgstore
+                # agent.store = average
+                self.agents[1].store = avgstore
+                print("sharing: " + str(avgstore) + ", distance: " + str(distance))
+    # End if
+# End loop
         
 
