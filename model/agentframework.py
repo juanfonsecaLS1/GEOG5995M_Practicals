@@ -87,7 +87,7 @@ class Agent():
                 self.store = avgstore
                 # agent.store = average
                 self.agents[1].store = avgstore
-                print("sharing: " + str(avgstore) + ", distance: " + str(distance))
+                # print("sharing: " + str(avgstore) + ", distance: " + str(distance))
     # End if
 # End loop
         

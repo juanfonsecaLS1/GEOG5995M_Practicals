@@ -11,6 +11,8 @@ import matplotlib.pyplot
 import agentframework
 import csv
 
+random.seed(1)
+
 
 environment = []
 # Reading the environment file
@@ -28,7 +30,7 @@ with open("in.txt") as csvfile:
         environment.append(rowlist)
       
 num_of_agents = 20
-num_of_iterations = 10000
+num_of_iterations = 1000
 neighbourhood = 50 
 
 agents = []
@@ -41,10 +43,12 @@ for i in range(num_of_agents):
 
 # Move the agents.
 for j in range(num_of_iterations):
+    random.shuffle(agents)
     for i in range(num_of_agents):
         agents[i].move()
         agents[i].eat()
         agents[i].share_with_neighbours(neighbourhood)
+        
 
 matplotlib.pyplot.xlim(0, 300)
 matplotlib.pyplot.ylim(0, 300)
