@@ -32,16 +32,14 @@ def distance_between(agents_row_a, agents_row_b):
     ((agents_row_a.y - agents_row_b.y)**2))**0.5
 
 num_of_agents = 10
-num_of_iterations = 500
+num_of_iterations = 1000000
 agents = []
 
 # Make the agents.
 for i in range(num_of_agents):
     agents.append(agentframework.Agent(environment))
 
-agents.append(agentframework.Agent(1, 1))
-
-# agents.append(agentframework.Agent(environment))
+agents.append(agentframework.Agent(environment,x = 1,y = 1))
 
 # Move the agents.
 for j in range(num_of_iterations):
@@ -73,7 +71,7 @@ with f_store:
     tmp_store=[]
     for k in range(num_of_agents):
         tmp_store.append(agents[k].store)
-    print(tmp_store) # Print for testing the result of the storage in each iteration
+    #print(tmp_store) # Print for testing the result of the storage in each iteration
     write.writerow(tmp_store)
 f_store.close()
 
