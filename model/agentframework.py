@@ -54,11 +54,18 @@ class Agent():
         else:
             self._y = (self._y - 1) % len(self.environment)
 
-    def eat(self): # can you make it eat what is left?
+    def eat(self):
+        # For eating
         if self.environment[self.y][self.x] > 9: 
             self.environment[self.y][self.x] -= 10
             self.store += 10
         else:
-            self.environment[self.y][self.x] = 0
             self.store += self.environment[self.y][self.x]
+            self.environment[self.y][self.x] = 0
+        
+        # For sicking up the store if >100
+        if self.store > 100: 
+            self.environment[self.y][self.x] += self.store
+            self.store = 0
+        
 
