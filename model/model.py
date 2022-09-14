@@ -6,10 +6,10 @@ Created on Tue Sep 13 13:21:10 2022
 """
 
 import random
-import operator
 import matplotlib.pyplot
 import agentframework
 import csv
+import sys
 
 random.seed(1)
 
@@ -28,10 +28,14 @@ with open("in.txt") as csvfile:
             rowlist.append(value)
             
         environment.append(rowlist)
-      
+'''      
 num_of_agents = 20
 num_of_iterations = 1000
 neighbourhood = 50 
+'''
+num_of_agents = int(sys.argv[1])
+num_of_iterations = int(sys.argv[2])
+neighbourhood = int(sys.argv[3])
 
 agents = []
 
