@@ -9,9 +9,10 @@ import random
 class Agent():
     
     # Defines the class and defines x and y as optional arguments
-    def __init__ (self, environment, x = None, y = None):
+    def __init__ (self, environment, agents, x = None, y = None):
         self.environment = environment
         self.store = 0
+        self.angents = agents
         
         # Define the limits for randomising
         n_rows = len(self.environment)

@@ -32,14 +32,14 @@ def distance_between(agents_row_a, agents_row_b):
     ((agents_row_a.y - agents_row_b.y)**2))**0.5
 
 num_of_agents = 10
-num_of_iterations = 500000
+num_of_iterations = 100
 agents = []
 
 # Make the agents.
 for i in range(num_of_agents):
-    agents.append(agentframework.Agent(environment))
+    agents.append(agentframework.Agent(environment,agents))
 
-agents.append(agentframework.Agent(environment,x = 1,y = 1))
+# agents.append(agentframework.Agent(environment,x = 1,y = 1)) # This is to test if an agent is correctly positioned
 
 # Move the agents.
 for j in range(num_of_iterations):
