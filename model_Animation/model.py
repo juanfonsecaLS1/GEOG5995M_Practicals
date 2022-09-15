@@ -53,8 +53,7 @@ with open("in.txt") as csvfile:
 # Make the agents.
 for i in range(num_of_agents):
     agents.append(agentframework.Agent(environment,agents,cmap))
-    print(agents[i].colour)
-
+    
 # agents.append(agentframework.Agent(environment,x = 1,y = 1)) # This is to test if an agent is correctly positioned
 
 # Move the agents.
