@@ -14,13 +14,17 @@ import csv
 random.seed(1)
 
       
-num_of_agents = 20
+num_of_agents = 10
 num_of_iterations = 1000
-neighbourhood = 50
+neighbourhood = 20
 
 agents = []
 environment = []
- 
+
+
+
+fig = matplotlib.pyplot.figure(figsize = [8,8])
+
 '''
 num_of_agents = int(sys.argv[1])
 num_of_iterations = int(sys.argv[2])
@@ -49,21 +53,25 @@ for i in range(num_of_agents):
 # agents.append(agentframework.Agent(environment,x = 1,y = 1)) # This is to test if an agent is correctly positioned
 
 # Move the agents.
-for j in range(num_of_iterations):
+def update(frame_number):
+    
+    fig.clear()
+    
     random.shuffle(agents)
     for i in range(num_of_agents):
         agents[i].move()
         agents[i].eat()
         agents[i].share_with_neighbours(neighbourhood)
+
+    matplotlib.pyplot.xlim(0, len(environment[0]))
+    matplotlib.pyplot.ylim(0, len(environment))
+    matplotlib.pyplot.imshow(environment)
+
+    for i in range(num_of_agents):
+        matplotlib.pyplot.scatter(agents[i].x,agents[i].y, s = agents[i].store*5, alpha = 1/(agents[i].store**0.2), c = agents[i].colour)
         
+animation = matplotlib.animation.FuncAnimation(fig, update, interval=1, repeat=False, frames=num_of_iterations)
 
-matplotlib.pyplot.xlim(0, 300)
-matplotlib.pyplot.ylim(0, 300)
-matplotlib.pyplot.imshow(environment)
-
-for i in range(num_of_agents):
-    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
-matplotlib.pyplot.show()
 
 '''
 # Writing the environment at the end
