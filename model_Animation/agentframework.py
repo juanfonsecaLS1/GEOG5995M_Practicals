@@ -5,20 +5,18 @@ Created on Tue Sep 13 13:31:53 2022
 @author: ts18jpf
 """
 import random
-import matplotlib
 
 
 
 class Agent():
     
     # Defines the class and defines x and y as optional arguments
-    def __init__ (self, environment, agents, x = None, y = None):
+    def __init__ (self, environment, agents, cmap, x = None, y = None):
         self.environment = environment
         self.store = 0
         self.agents = agents
-        
-        cmap = matplotlib.cm.get_cmap('jet')
         self.colour = cmap(random.random())
+        
         
         # Define the limits for randomising
         n_rows = len(self.environment)

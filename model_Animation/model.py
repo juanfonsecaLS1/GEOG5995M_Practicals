@@ -7,12 +7,16 @@ Created on Tue Sep 13 13:21:10 2022
 
 import random
 import matplotlib.pyplot
+import matplotlib.animation 
+import matplotlib.cm as cm
 import agentframework
 import csv
+
 #import sys
 
 random.seed(1)
 
+# %matplotlib qt
       
 num_of_agents = 10
 num_of_iterations = 1000
@@ -21,7 +25,7 @@ neighbourhood = 20
 agents = []
 environment = []
 
-
+cmap = cm.get_cmap('jet')
 
 fig = matplotlib.pyplot.figure(figsize = [8,8])
 
@@ -48,7 +52,8 @@ with open("in.txt") as csvfile:
 
 # Make the agents.
 for i in range(num_of_agents):
-    agents.append(agentframework.Agent(environment,agents))
+    agents.append(agentframework.Agent(environment,agents,cmap))
+    print(agents[i].colour)
 
 # agents.append(agentframework.Agent(environment,x = 1,y = 1)) # This is to test if an agent is correctly positioned
 
@@ -68,7 +73,13 @@ def update(frame_number):
     matplotlib.pyplot.imshow(environment)
 
     for i in range(num_of_agents):
-        matplotlib.pyplot.scatter(agents[i].x,agents[i].y, s = agents[i].store*5, alpha = 1/(agents[i].store**0.2), c = agents[i].colour)
+        
+        if agents[i].store < 1:
+            a = 1
+        else:
+            a = (1/(agents[i].store**0.2))
+        
+        matplotlib.pyplot.scatter(agents[i].x,agents[i].y, s = agents[i].store*10, c = [agents[i].colour], alpha = a)
         
 animation = matplotlib.animation.FuncAnimation(fig, update, interval=1, repeat=False, frames=num_of_iterations)
 
