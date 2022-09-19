@@ -76,7 +76,7 @@ def set_pars():
     # Runs the initial processes
     initial()
     
-    # Disables the set parameters button to avoid errors
+    # Disables the set parameters button and entry widgets to avoid errors
     setButton.config(state = "disabled")
     in_nag.config(state = "disabled")
     in_it.config(state = "disabled")
@@ -267,6 +267,7 @@ setButton.grid(row=1, column=6)
 canvas = matplotlib.backends.backend_tkagg.FigureCanvasTkAgg(fig, master=root)
 canvas._tkcanvas.grid(row=2, column=0, columnspan=7)
 
+# Triggers the on_closing method when the window is closed
 root.protocol("WM_DELETE_WINDOW", on_closing)
 tkinter.mainloop()
 
