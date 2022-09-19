@@ -12,6 +12,27 @@ class Agent():
     
     # Defines the class and defines x and y as optional arguments
     def __init__ (self, environment, agents, cmap, x = None, y = None):
+        """
+        Definition of the class
+        
+        Parameters
+        ----------
+        environment : list
+            List of list with rasted data of 'available resources' in the environment.
+        agents : list
+            List of agents
+        cmap : colormap
+            Base colormap which is used to define colours for plots.
+        x : int, optional
+            x coordinate of a given agent. The default is None.
+        y : int, optional
+            y coordinate of a given agent. The default is None.
+
+        Returns
+        -------
+        None.
+
+        """
         self.environment = environment
         self.store = 0
         self.agents = agents
