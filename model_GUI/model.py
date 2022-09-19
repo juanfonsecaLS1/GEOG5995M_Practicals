@@ -51,28 +51,36 @@ def set_pars():
 
     # Exceptions declaration for wrong/missing values
     try:
-         num_of_agents = int(in_nag.get())
+        num_of_agents = int(in_nag.get())
     except ValueError :
         num_of_agents = 20
+        in_nag.delete(0,tkinter.END)
+        in_nag.insert(0,"20")
 
     try:
         num_of_iterations = int(in_it.get())
     except ValueError :
         num_of_iterations = 1000
-        
+        in_it.delete(0,tkinter.END)
+        in_it.insert(0,"1000")
     try:
         neighbourhood = int(in_nei.get())
     except ValueError :
         neighbourhood = 40
-    
+        in_nei.delete(0,tkinter.END)
+        in_nei.insert(0,"40")
+
     # Activates the Menu option for running the model
-    model_menu.entryconfig("Run model",state="normal")
+    model_menu.entryconfig("Run model", state = "normal")
     
     # Runs the initial processes
     initial()
     
     # Disables the set parameters button to avoid errors
     setButton.config(state = "disabled")
+    in_nag.config(state = "disabled")
+    in_it.config(state = "disabled")
+    in_nei.config(state = "disabled")
     
     # Produces a notification for the user of the GUI 
     lbl0.config(text = "Parameters loaded! Run model using the menu")
@@ -203,7 +211,7 @@ def outputs():
 
 def run():
     """
-    This function produces the animated plot with an specific number of iterations
+    This function produces the animated plot in the canvas area with an specific number of iterations
 
     Returns
     -------
