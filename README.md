@@ -3,26 +3,26 @@ Description
 This repository contains the
 
 ## Contents
-1. [Repository Structure](#repstr)
-2. [Agent Based Model](#ABM)
-	1. [Requirements](#reqr)
-	1. [How to open it](#howt)
-	2. [Graphic User Interface](#GUI)
+1. [Repository Structure](#repository-structure)
+2. [Agent Based Model](#agent-based-model)
+	1. [Requirements](#requirements)
+	1. [How to open it](#how-to-open-it)
+	2. [Graphic User Interface](#graphic-user-interface-gui)
 	3. [Outputs](#outputs)
-	4. [Limitations and Known Issues](#lims)
+	4. [Limitations and Known Issues](#limitationsknown-issues)
 
-## Repository Structure {#repstr}
+## Repository Structure
 
 
 
-## Agent Based Model {#ABM}
+## Agent Based Model
 
-### Requirements {#reqr}
+### Requirements
 Modules
 
-### How to run it {#howt}
-#### Graphic User Interface (GUI) {#GUI}
+### How to open it
+#### Graphic User Interface (GUI)
 ##### Setting model parameters
 ##### Running the model 
-#### Outputs {#outputs}
-#### Limitations/Known Issues {#lims}
+#### Outputs
+#### Limitations/Known Issues
