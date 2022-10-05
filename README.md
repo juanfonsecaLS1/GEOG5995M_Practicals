@@ -1,11 +1,12 @@
 # GOEG5995M - First assignment
-Description
-This repository contains the
+This portfolio contains the code produced for the GEOG5995M module. The scripts in this repository evidence
+the different stages of the development of the final [Agent Based Model](#agent-based-model). 
 
+
+## Contents
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Expand table of contents</summary>
   
-  ## Contents
   1. [Repository Structure](#repository-structure)
   2. [Agent Based Model](#agent-based-model)
       1. [Requirements](#requirements)
@@ -19,8 +20,24 @@ This repository contains the
 
 
 ## Repository Structure
-
-
+```
+📦Repository
+ ┣ 📜01A_Agent_based_modelling.py
+ ┣ 📜01B_Randomise_100by100.py
+ ┣ 📜03_ACode_Shrinking_II.py
+ ┣ 📜03_BCode_Shrinking_II.py
+ ┣ 📜03_CTimingII.py
+ ┣ 📂model
+ ┃ ┣ 📜agentframework.py
+ ┃ ┣ 📜model_v0.py
+ ┃ ┗ 📜model.py
+ ┣ 📂model_Animation
+ ┃ ┣ 📜agentframework.py
+ ┃ ┣ 📜model.py
+ ┗ 📂model_GUI
+   ┣ 📜agentframework.py
+   ┗ 📜model.py
+```
 
 ## Agent Based Model
 
