@@ -64,9 +64,19 @@ Three parameters can be specified using integers:
 - the __*Number of agents*__ in the simulation
 - the distance threshold used to determine when the agents share their resources i.e. are in the same __*Neighbourhood*__
 - the maximun __*Number of iterations*__ to be produced
+
+![Clean Parameters](https://user-images.githubusercontent.com/69847296/194627694-23edeb5c-db51-407c-8bd5-2ac52dd2d33a.png)
+
 Once the parameters are defined, they can be set using the button on the top right. If one or more parameters are invalid or missing, default values are used. 
 ##### Running the model 
-To run the model, click on *Model >> Run Model*. The window will show an animation with all iterations. In the plot, resources in each location are shown using a colour scale, and the size of the agents indicate the current amount of store.
+To run the model, click on *Model >> Run Model*. 
+
+![Run model](https://user-images.githubusercontent.com/69847296/194627955-f54ab3f9-c851-4748-a840-3a810e81b582.png)
+
+The window will show an animation with all iterations. In the plot, resources in each location are shown using a colour scale, and the size of the agents indicate the current amount of store.
+
+![model_visual](https://user-images.githubusercontent.com/69847296/194628069-5c8e89be-f9e1-4258-a7a4-3caaa5282367.png)
+
 #### Outputs
 Once the model has stopped, two outputs are produced in the same working directory.
 - ```FinalEnvironment.txt``` saves the status of the environment after the selected number of iterations
