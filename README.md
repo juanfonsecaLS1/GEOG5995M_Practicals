@@ -3,9 +3,8 @@ This portfolio contains the code produced for the GEOG5995M module. The scripts 
 the different stages of the development of the final [Agent Based Model](#agent-based-model). 
 
 
-## Contents
 <details>
-  <summary>Expand table of contents</summary>
+  <summary><h2>Table of Contents</h2></summary>
   
   1. [Repository Structure](#repository-structure)
   2. [Agent Based Model](#agent-based-model)
