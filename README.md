@@ -81,4 +81,4 @@ The window will show an animation with all iterations. In the plot, resources in
 Once the model has stopped, two outputs are produced in the same working directory.
 - ```FinalEnvironment.txt``` saves the status of the environment after the selected number of iterations
 - Each line in ```AgentStorage.txt``` corresponds to the amount stored by all agents at the end of a single run of the model.
-#### Limitations/Known Issues
+
