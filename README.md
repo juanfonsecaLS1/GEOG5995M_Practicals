@@ -46,7 +46,7 @@ bs4
 ```
 ### How to open it
 The files can be opened and run using a Python IDE such as Spyder or calling the model from the Anaconda command prompt. The second method requires less steps and, therefore, is less likely to fail. The steps are: 
-1. Copy the model files from the ```model_GUI``` folder into a folder your local drive
+1. Download the files of the model ([link](https://github.com/juanfonsecaLS1/GEOG5995M_Practicals/model_GUI.zip))Copy the model files from the ```model_GUI``` folder into a folder your local drive
 2. In the Anaconda command prompt, change the working directory to the directory where the files are saved. For example:
 ```
 cd /d M:\MSc\GOEG5995M\01_practical_agent_based\model_GUI
