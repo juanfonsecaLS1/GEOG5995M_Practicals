@@ -47,16 +47,16 @@ bs4
 ```
 ### How to open it
 The files can be opened and run using a Python IDE such as Spyder or calling the model from the Anaconda command prompt. The second method requires less steps and, therefore, is less likely to fail. The steps are: 
-1. Save the model files in your local drive
+1. Copy the model files from the ```model_GUI``` folder into a folder your local drive
 2. In the Anaconda command prompt, change the working directory to the directory where the files are saved. For example:
 ```
 cd /d M:\MSc\GOEG5995M\01_practical_agent_based\model_GUI
 ```
-3. Run the main file of the model using the command
+3. Open the the files using the command
 ```
 python model.py
 ```
-After a few seconds, the a window will appear.
+A window will appear after a few seconds.
 #### Graphic User Interface (GUI)
 The GUI allows the user to the model parameters and run the model.
 ##### Setting model parameters
