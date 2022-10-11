@@ -1,6 +1,7 @@
 # GOEG5995M - First assignment
-This portfolio contains the code produced for the GEOG5995M module. The scripts in this repository evidence
-the different stages of the development of the final [Agent Based Model](#agent-based-model). 
+This portfolio contains the code produced for the GEOG5995M module, which is saved in 
+[this repository](https://github.com/juanfonsecaLS1/GEOG5995M_Practicals). The repository evidences
+the different stages of the development of the final [Agent Based Model](#agent-based-model).
 
 
 <details>
