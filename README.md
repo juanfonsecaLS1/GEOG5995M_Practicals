@@ -25,10 +25,10 @@ The following table shows the correspondence of the files and the different prac
 | 02 Code Shrinking I | &nbsp;┣📜03_ACode_Shrinking_II.py  |
 | 03 Code Shrinking II  |&nbsp;┣📜03_BCode_Shrinking_II.py  |
 | 04 Building Tools  |&nbsp;┣📜03_CTimingII.py |
-| 05 Agents!<br />06 I/O|&nbsp;┣ 📂model<br />&nbsp;┃ ┣📜agentframework.py<br>&nbsp;┃ ┗📜model_v0.py|
-| 07 Communicating  |&nbsp;┣ 📂model<br />&nbsp;┃ ┣📜agentframework.py<br>&nbsp;┃ ┗📜model.py |
-| 08 Animation/Behaviour  |&nbsp;┣ 📂model_Animation<br />&nbsp;┃ ┣📜agentframework.py<br>&nbsp;┃ ┗📜model.py  |
-| 09 GUI/WEB scrapping |&nbsp;┗ 📂model_GUI<br /> &nbsp; &nbsp; &nbsp;  ┣📜agentframework.py<br> &nbsp; &nbsp; &nbsp;  ┗📜model.py  |
+| 05 Agents!<br>06 I/O|&nbsp;┣ 📂model<br>&nbsp;┃ ┣📜agentframework.py<br>&nbsp;┃ ┗📜model_v0.py|
+| 07 Communicating  |&nbsp;┣ 📂model<br>&nbsp;┃ ┣📜agentframework.py<br>&nbsp;┃ ┗📜model.py |
+| 08 Animation/Behaviour  |&nbsp;┣ 📂model_Animation<br>&nbsp;┃ ┣📜agentframework.py<br>&nbsp;┃ ┗📜model.py  |
+| 09 GUI/WEB scrapping |&nbsp;┗ 📂model_GUI<br> &nbsp; &nbsp; &nbsp;  ┣📜agentframework.py<br> &nbsp; &nbsp; &nbsp;  ┗📜model.py  |
 
 ## Agent Based Model
 The ABM recreates the interaction of a specific number of individuals (agents) with each other and a defined environment. While all individuals move across a space limited by the size of the environment, their interaction with the environment consists of two actions, they can consume the environment's resources at a fixed rate; and, once their capacity is reached, deposit everything they have consumed. On the other hand, there is only one mechanism for interaction among individuals; they can share their resources with individuals located within a distance range.
