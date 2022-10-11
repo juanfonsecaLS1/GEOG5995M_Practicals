@@ -36,7 +36,7 @@ The ABM recreates the interaction of a specific number of individuals (agents) w
 The following sections describe the basic steps to open the Python files, set initial parameters, run the ABM, and obtain the outputs from the model.
 
 ### Requirements
-The ABM was developed using the Anaconda distribution with Python 3.7. In order to be able to run it correctly the following modules should be available in the Python environment:
+The ABM was developed using the Anaconda distribution with Python 3.7. In order to run it correctly the following modules should be available in the Python environment:
 ```
 matplotlib
 tkinter
